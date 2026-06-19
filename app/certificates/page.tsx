@@ -42,8 +42,8 @@ const certificates = [
   {
     id: '5',
     title: 'boroCTF',
-    image: '/certificates/boroctf.png',
-    file: '/certificates/boroctf.pdf',
+    image: '/certificates/boroCTF.png',
+    file: '/certificates/boroCTF.pdf',
   },
 ]
 
