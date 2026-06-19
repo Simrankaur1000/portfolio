@@ -18,7 +18,7 @@ export function CtfAwards() {
       {/* Award 2 */}
       <div className="overflow-hidden rounded-2xl">
         <Image
-          src="/images/award2.jpeg"
+          src="/images/img.jpeg"
           alt="Award 2"
           width={1000}
           height={800}
