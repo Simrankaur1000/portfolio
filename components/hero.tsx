@@ -46,7 +46,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon-green opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-neon-green" />
           </span>
-          Available for internships
+          Open to internships and full-time opportunities
         </motion.div>
 
         <motion.h1
