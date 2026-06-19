@@ -2,40 +2,28 @@ import Image from 'next/image'
 
 export function CtfAwards() {
   return (
-    <div className="mt-8 grid grid-cols-[1.4fr_1fr] gap-4">
+    <div className="mt-8 grid gap-4 md:grid-cols-2">
 
-      {/* Left Large Image */}
+      {/* Award 1 */}
       <div className="overflow-hidden rounded-2xl">
         <Image
           src="/images/award1.jpeg"
           alt="Award 1"
           width={1000}
-          height={1000}
+          height={800}
           className="h-full w-full object-cover"
         />
       </div>
 
-      {/* Right Side */}
-      <div className="grid gap-4">
-        <div className="overflow-hidden rounded-2xl">
-          <Image
-            src="/images/award2.jpeg"
-            alt="Award 2"
-            width={1000}
-            height={500}
-            className="w-full object-cover"
-          />
-        </div>
-
-        <div className="overflow-hidden rounded-2xl">
-          <Image
-            src="/images/img.jpeg"
-            alt="Award 3"
-            width={1000}
-            height={500}
-            className="w-full object-cover"
-          />
-        </div>
+      {/* Award 2 */}
+      <div className="overflow-hidden rounded-2xl">
+        <Image
+          src="/images/award2.jpeg"
+          alt="Award 2"
+          width={1000}
+          height={800}
+          className="h-full w-full object-cover"
+        />
       </div>
 
     </div>
