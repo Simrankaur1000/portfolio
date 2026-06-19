@@ -187,7 +187,7 @@ export function Contact() {
           <input
             type="hidden"
             name="_next"
-            value="https://yourdomain.com/#contact"
+            value="https://portfolio-website-a8bgqbur0-simrankaur0101010-3853s-projects.vercel.app/#contact"
           />
 
           <div className="grid gap-4 sm:grid-cols-2">
