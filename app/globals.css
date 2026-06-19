@@ -1,0 +1,252 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-space), var(--font-geist-sans), sans-serif;
+  --font-sans: var(--font-geist-sans), 'Geist Fallback';
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cyan: var(--cyan);
+  --color-purple: var(--purple);
+  --color-neon-green: var(--neon-green);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulseGlow 3s ease-in-out infinite;
+  --animate-scan: scan 4s linear infinite;
+  --animate-dash: dash 3s linear infinite;
+}
+
+:root {
+  color-scheme: dark;
+  --radius: 0.75rem;
+
+  /* Deep midnight / charcoal black backgrounds */
+  --background: oklch(0.16 0.03 260);
+  --foreground: oklch(0.95 0.01 240);
+
+  --card: oklch(0.21 0.035 262 / 0.6);
+  --card-foreground: oklch(0.95 0.01 240);
+
+  --popover: oklch(0.18 0.03 262);
+  --popover-foreground: oklch(0.95 0.01 240);
+
+  /* Neon blue */
+  --primary: oklch(0.66 0.19 255);
+  --primary-foreground: oklch(0.14 0.03 260);
+
+  --secondary: oklch(0.26 0.04 262);
+  --secondary-foreground: oklch(0.95 0.01 240);
+
+  --muted: oklch(0.24 0.035 262);
+  --muted-foreground: oklch(0.7 0.03 250);
+
+  /* Electric cyan accent */
+  --accent: oklch(0.8 0.14 205);
+  --accent-foreground: oklch(0.14 0.03 260);
+
+  --destructive: oklch(0.62 0.23 25);
+
+  --border: oklch(0.7 0.05 250 / 0.16);
+  --input: oklch(0.7 0.05 250 / 0.18);
+  --ring: oklch(0.66 0.19 255);
+
+  /* Extra glow tokens */
+  --cyan: oklch(0.82 0.15 200);
+  --purple: oklch(0.62 0.22 295);
+  --neon-green: oklch(0.86 0.21 150);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+    body {
+    @apply text-foreground;
+
+    background-image:
+      linear-gradient(
+       rgba(0,0,0,0.75),
+       rgba(0,0,0,0.75)
+      ),
+      url('/images/hero-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: color-mix(in oklch, var(--card) 70%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid oklch(0.7 0.05 250 / 0.14);
+  }
+
+  .text-glow-primary {
+    text-shadow: 0 0 18px color-mix(in oklch, var(--primary) 70%, transparent);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 18px color-mix(in oklch, var(--cyan) 70%, transparent);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--primary) 40%, transparent),
+      0 0 24px -4px color-mix(in oklch, var(--primary) 60%, transparent);
+  }
+  .glow-cyan {
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--cyan) 40%, transparent),
+      0 0 24px -4px color-mix(in oklch, var(--cyan) 60%, transparent);
+  }
+  .glow-purple {
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--purple) 40%, transparent),
+      0 0 24px -4px color-mix(in oklch, var(--purple) 60%, transparent);
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+
+/* ===== RGB Gaming Glow Logo ===== */
+
+.rgb-logo {
+  animation:
+    rgbShift 6s linear infinite,
+    pulseGlow 2.5s ease-in-out infinite;
+
+  text-shadow:
+    0 0 8px currentColor,
+    0 0 18px currentColor,
+    0 0 35px currentColor;
+
+  transition: all 0.3s ease;
+}
+
+.rgb-logo:hover {
+  transform: scale(1.08);
+
+  text-shadow:
+    0 0 12px currentColor,
+    0 0 25px currentColor,
+    0 0 55px currentColor;
+}
+
+@keyframes rgbShift {
+
+  0% {
+    color: #00ffff;
+  }
+
+  20% {
+    color: #00ff80;
+  }
+
+  40% {
+    color: #39a0ff;
+  }
+
+  60% {
+    color: #ff00ff;
+  }
+
+  80% {
+    color: #ff4dd2;
+  }
+
+  100% {
+    color: #00ffff;
+  }
+}
+
+@keyframes pulseGlow {
+
+  0% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.35);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
