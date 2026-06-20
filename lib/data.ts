@@ -82,7 +82,7 @@ export const education = [
       'Bachelor of Computer Applications (BCA)',
 
     org:
-      'Jyotinivas Autonomous College, Kolkata',
+      'Jyotinivas Autonomous College, Bangalore',
 
     detail:
       'Built foundations in systems programming, networking and secure software development.',
