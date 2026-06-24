@@ -211,6 +211,26 @@ export const certifications = [
 
   {
     name:
+      'CLLMSP',
+
+    org:
+      'Red Team Leaders',
+
+    status:
+      'Completed',
+
+    blurb:
+      'Certified LLM Security Professional focused on securing AI/LLM applications and understanding modern LLM security concepts.',
+
+    preview:
+      '/certificates/cllmsp.png',
+
+    download:
+      '/certificates/cllmsp.pdf',
+  },
+
+  {
+    name:
       'Tata Cybersecurity Analyst Job Simulation',
 
     org:

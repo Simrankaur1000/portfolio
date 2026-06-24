@@ -41,11 +41,19 @@ const certificates = [
 
   {
     id: '5',
+    title: 'BrainCon 2026',
+    image: '/certificates/braincon2026.png',
+    file: '/certificates/braincon2026.pdf',
+  },
+
+  {
+    id: '6',
     title: 'boroCTF',
     image: '/certificates/boroCTF.png',
     file: '/certificates/boroCTF.pdf',
   },
 ]
+
 
 export default function CertificatesPage() {
   const [preview, setPreview] =
