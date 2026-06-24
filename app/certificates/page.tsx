@@ -42,8 +42,8 @@ const certificates = [
   {
     id: '5',
     title: 'BrainCon 2026',
-    image: '/certificates/braincon2026.png',
-    file: '/certificates/braincon2026.pdf',
+    image: '/certificates/braincon.png',
+    file: '/certificates/braincon.pdf',
   },
 
   {
