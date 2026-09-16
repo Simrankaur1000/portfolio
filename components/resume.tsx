@@ -11,7 +11,7 @@ const highlights = [
   'Interested in VAPT, SOC and Cyber Defense',
 ]
 
-const resumePath = '/resume/resume.pdf'
+const resumePath = '/resume/RESUME.pdf'
 
 export function Resume() {
   return (
