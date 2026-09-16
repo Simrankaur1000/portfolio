@@ -169,6 +169,25 @@ export type CertStatus =
 
 
 export const certifications = [
+   {
+    name:
+      'CRTA',
+
+    org: 
+      'CyberWarfare Labs',
+
+    status:
+      'Completed',
+
+    blurb:
+      'Certified Red Team Analyst.',
+
+    preview:
+      '/certificates/CRTA.jpeg',
+
+    download:
+      '/certificates/CRTA.pdf',
+  },
   {
     name:
       'CRTOM',
