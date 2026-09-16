@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Simran Kaur — Cyber Security Portfolio',
     description:
-      'Aspiring penetration tester · VAPT · SOC · Digital Forensics · CTF',
+      'Aspiring penetration tester · CRTA · VAPT · SOC · Digital Forensics · CTF',
     type: 'website',
   },
 }
